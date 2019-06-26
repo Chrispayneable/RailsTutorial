@@ -5,6 +5,7 @@
   <h2>
     Ruby on Railsを使ったウェブ・アプリケーションのHPでございます。どうぞお試しください。
   </h2>
-
-  <%= link_to "今すぐ登録", signup_path, class: "btn btn-lg btn-primary" %>
+  <% unless current_user.present? %>
+    <%= link_to "今すぐ登録", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
